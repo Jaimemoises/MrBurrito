@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+    <script src =  "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+             <div class ="orderwrapper">
+
+                        <div class="left"></div>
+
+                         <div class="right">
+
+            <div class="Welcome">
+           <h3 class="">Hi! Welcome to Mr Burrito ™<br>What would you like for today?</h3>
+            </div>
+            <div class="Welcome"></div>
+
+    <form name="order" id="order"><!--form for the order-->
+        <table>
+            <div>
+                <tr>
+                
+                    <td><label for="size"><strong>Which size of the Burrito would you like?</strong></label></td><!--Size label-->
+                    <td>
+                        <!--Sizes of the burritos-->
+                    <select class="food" name="food" onchange="if(this.value=='Supersize'){alert('You have selected SUPERSIZE! Are you sure?');}">
+                    <option selected disabled value="Unselected" id="size">Select food size</option>
+                    <option value="Large">Large (&euro;7.00)</option>
+                    <option value="Extralarge">Extralarge (&euro;9.00)</option>
+                    <option value="Supersize">Supersize(&euro;17.50)</option>
+                    </select>
+                     </td>
+                </tr>
+            </div> 
+
+            <div>
+                <tr>
+                    <!--Quantity-->
+                    <td><label for="quantity"><strong>How many would you like?</strrong></label></td>
+                    <td><input type="text" name="quantity" id="quantity"  placeholder="Tell me the quantity"></td>
+                
+                </tr>
+            </div>
+            
+            <div>
+                <tr>
+                    <!--Discount code-->
+                    <td><label for="discount"><strong>Discount Code: </strong></label></td>
+                    <td><input type="text" name="discount" id="discount" placeholder="Would you have a discount code?" size="50"><br></td>
+                </tr>
+            </div>
+            
+            <div>
+                <tr>
+                    <!--Additional comments-->
+                    <td><label for="comments" placeholder="Eg. No salt, no paper."><strong>Comments:</strong></label></td>
+                    <td><textarea type="text" name="comments" id="comments" cols="45" rows="8"></textarea>
+                    </td>
+                </tr>
+            </div>    
+           
+
+
+            <div>
+                <tr>
+                    <!--Total-->
+                    <td><input class="submit-order"type="button" value="submit" onclick="calculateTotal()"></input></td>
+                
+                    <td class="tdlastclass">Your total is: <input id="total" type="text" name="total" placeholder="" readonly>€ </td>
+                </tr>
+            </div>
+
+        
+        </table> 
+        
+    </form>
+    
+</div>
+    </div>
+</body>
+</html>
